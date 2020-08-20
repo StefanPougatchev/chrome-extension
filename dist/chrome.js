@@ -26,7 +26,7 @@ const searchForName = (value) => {
 };
 
 function appendData(newInfo) {
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 10; i++) {
     const resultsheader = document.querySelector('.results');
     let newdiv = document.createElement('div');
     newdiv.classList.add('childcontainer');
@@ -36,9 +36,20 @@ function appendData(newInfo) {
     H2.classList.add('title');
     H2.innerHTML = newInfo[i].title;
 
+
     let p1 = document.createElement('p');
     p1.classList.add('views');
     p1.innerHTML = 'Views: ' + newInfo[i].view_count;
+
+    var img = document.createElement("img"); 
+    if (newInfo[i].is_answered === true){
+      img.classList.add('true');
+      img.src = "https://banner2.cleanpng.com/20180403/ejw/kisspng-check-mark-computer-icons-customer-service-theme-c-green-tick-5ac32c4dc67a94.651080821522740301813.jpg"; 
+    } else {
+      img.classList.add('false')
+      img.src = "https://banner2.cleanpng.com/20180401/vgw/kisspng-x-mark-check-mark-desktop-wallpaper-clip-art-x-mark-5ac194d45fdcc4.0082162715226359883927.jpg";
+    }
+    
 
     let a = document.createElement('a');
     a.classList.add('links');
@@ -51,6 +62,7 @@ function appendData(newInfo) {
     resultsheader.appendChild(newdiv);
     newdiv.appendChild(H2);
     newdiv.appendChild(p1);
+    newdiv.appendChild(img)
     newdiv.appendChild(a);
   }
 }

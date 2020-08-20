@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body class="container">
+    <img
+      src="https://cdn.sstatic.net/Sites/stackoverflow/company/Img/logos/so/so-logo.svg?v=a010291124bf"
+      alt="Stackoverflow"
+      class="logo"
+    />
+
+    <!-- <form class = "form-data" autocomplete = "on">
+  <div>
+    <input type="text" class = "country-name" />
+  </div>
+  <button class = "search-btn">Search</button>
+  </form> -->
+
+    <form class="form-data" autocomplete="on">
+      <div class="wrap">
+        <div class="search">
+          <input
+            type="text"
+            class="searchTerm"
+            placeholder="Enter your search here"
+          />
+          <button type="submit" class="searchButton">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <div class="result">
+      <div class="loading">Loading...</div>
+      <div class="errors"></div>
+      <div class="data"></div>
+      <div class="resultcontainer"></div>
+    </div>
+
+    <div class="results">    
+    
+    </div>
+
+   
+
+    <script src="./chrome.js"></script>
+  </body>
+</html>
